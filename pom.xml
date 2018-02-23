@@ -24,7 +24,7 @@
 		<java.version>1.8</java.version>
 		<dockerfile-maven-version>1.3.7</dockerfile-maven-version>
 		<project.registry>10.0.0.242:5000</project.registry>
-		<project.build>${env.BUILD_NUMBER}</project.build>
+		<project.build.buildNumber>${env.BUILD_NUMBER}</project.build.buildNumber>
 		
 	</properties>
 
@@ -81,7 +81,7 @@
   </executions>
   <configuration>
     <repository>${project.registry}/${project.artifactId}</repository>
-    <tag>${project.version}.${project.build}</tag>
+    <tag>${project.version}.${project.build.buildNumber}</tag>
     <buildArgs>
       <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
     </buildArgs>
