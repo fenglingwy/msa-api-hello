@@ -10,6 +10,6 @@ public class HelloController{
 
     @GetMapping("/index")
     public String index(){
-        return "hello";
+        return "hello2";
     }
 }
